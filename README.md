@@ -83,7 +83,7 @@ Form-internal state belongs to the form — it's not lifted.  Only the *committe
 
 When `transactions.length === 0`, show a friendly message in place of the list — *"No transactions yet. Add one below to get started."*
 
-Watch the `&&`-with-`0` gotcha from Tuesday's lesson: `{transactions.length && <X />}` will render the literal `0` on first load.
+Watch the `&&`-with-`0` gotcha from Thursday's lesson: `{transactions.length && <X />}` will render the literal `0` on first load.
 
 ## You're done when
 
@@ -98,7 +98,7 @@ Watch the `&&`-with-`0` gotcha from Tuesday's lesson: `{transactions.length && <
 ## Things to think about
 
 - `Summary`'s three numbers are **derived** from `transactions`, not stored in their own state.  Why is that better than calling `setBalance(...)` whenever a transaction is added?  (Hint: think about what happens if you forget to update one of the three.)
-- The `id` for each transaction comes from `Date.now()`.  What's the failure mode there?  (Hint: it's the same as Tuesday's Todo `key` discussion — what if a user adds two transactions in the same millisecond?)
+- The `id` for each transaction comes from `Date.now()`.  What's the failure mode there?  (Hint: it's the same as Thursday's Todo `key` discussion — what if a user adds two transactions in the same millisecond?)
 - `TransactionForm` owns its three input states locally.  Could you have lifted them too?  Should you?  What's the rule of thumb?
 - When you click delete, `App` re-renders, which re-renders every child.  Does `TransactionForm` need to re-render?  Why does React do it anyway?
 
